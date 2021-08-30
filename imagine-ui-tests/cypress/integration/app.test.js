@@ -1,11 +1,11 @@
-describe('Imagine Homepage ', () => {
+describe('Homepage ', () => {
     beforeEach(() => {
 
-      cy.setCookie('imagine-np', Cypress.env('IMAGINE_TOKEN'), {
+      cy.setCookie('imagine-np', Cypress.env('TOKEN'), {
         domain: 'velocity-np.ag',
       })
       
-      cy.visit('http://velocity-np.ag/imagine')
+      cy.visit('http://base-url')
       cy.wait(18000)
     })
   
