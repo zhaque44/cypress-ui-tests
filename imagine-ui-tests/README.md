@@ -1,5 +1,5 @@
-# imagine-ui-tests
-A project that contains e2e tests of the imagine-ui sdk
+# ui-tests
+A project that contains e2e tests 
 
 ## Prerequisites
 
