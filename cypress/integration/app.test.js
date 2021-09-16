@@ -1,4 +1,4 @@
-describe('Imagine Homepage ', () => {
+describe('Default Landing: Homepage ', () => {
     beforeEach(() => {
 
       cy.setCookie('production', Cypress.env('TOKEN'), {
