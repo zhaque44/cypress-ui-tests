@@ -2,7 +2,7 @@ describe('Imagine Homepage ', () => {
     beforeEach(() => {
 
       cy.setCookie('production', Cypress.env('TOKEN'), {
-        domain: 'velocity-np.ag',
+        domain: 'production-domain',
       })
       
       cy.visit('https://base-url/page#')
@@ -11,5 +11,16 @@ describe('Imagine Homepage ', () => {
   
     it('loads ', () => {
       cy.get('a[href*="/path/to/link"]').should('be.visible')
+      cy.get("#test-section").scrollIntoView().should("be.visible")
+      cy.get("#test-section > div > button").click()
+      
+      const choices = cy.get(".some-drop-down li")
+      
+      choices.should("have.length", 3)
+      choices.should((element) => {
+        expect(element.get(0).innerText).to.eq('first selection')
+        expect(element.get(1).innerText).to.eq('second selection')
+        expect(element.get(2).innerText).to.eq('third selection')
+      })
     })
   })
