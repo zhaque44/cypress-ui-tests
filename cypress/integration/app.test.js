@@ -9,7 +9,7 @@ describe('Imagine Homepage ', () => {
       cy.wait(18000)
     })
   
-    it('loads ', () => {
+    it('default smoke test: when the page loads', () => {
       cy.get('a[href*="/path/to/link"]').should('be.visible')
       cy.get("#test-section").scrollIntoView().should("be.visible")
       cy.get("#test-section > div > button").click()
